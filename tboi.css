@@ -1,0 +1,143 @@
+body{
+    background-image: url(./assets/fondo.png);
+    background-attachment: fixed;
+    background-size: 100%;
+    color:white;
+}
+
+*a[href]{
+    text-decoration: none;
+}
+
+a:visited{
+    color:rgb(228, 184, 184);
+    font-style: normal;
+    font-weight: lighter;
+}
+
+a:link{
+    color:rgb(216, 77, 77);
+}
+
+.image-center-principal{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    mask-repeat: no-repeat;
+    max-width:100%;
+
+    /* Animacion */
+    animation-name: up-n-down;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+@keyframes up-n-down {
+    from{
+        transform:translateY(0);
+        transform:translateY(15px); 
+    }
+
+    to{
+        transform: translateY(-15px);
+        transform :translateY(0%);
+    }
+}
+
+/* *********************************** */
+
+#page{
+    display: grid;
+    grid-auto-flow: column;
+    width: 100%;
+    height: 100%;
+    margin: 8px 0px;
+
+    grid-template-areas:
+    "head head head "
+    "main main main"
+    "footer footer footer";
+
+    grid-template-rows: 1fr ;
+    grid-template-columns: 100px 1fr;
+}
+
+
+#page>header{
+    grid-area: head;
+    width: 100%;
+    min-height: 220px;
+}
+
+.botonBonito{
+    width: 50px;
+    margin: 0 5px;
+    position: fixed;
+    top: 15px;
+    left: 0px;
+    cursor: pointer;
+
+    border-color: #6666;
+    background-color:gray;
+    border-radius: 5px;
+}
+
+.botonBonito:hover {
+    box-shadow: 1px 3px 6px red;
+}
+  
+#page>main{
+    grid-area: main;
+    margin:15px 23%;
+    text-align:center ;
+    padding-left: 1%;
+}
+
+p::first-letter{
+    color:rgb(216, 77, 77);
+}
+
+.centrado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe{
+    
+    margin:3% 0;
+    border-radius: 10px;
+    border-color: #6666;
+
+    box-shadow: -10px -10px #6666;
+}
+
+.content-image{
+    background-color: grey;
+    border-radius: 10px;
+    border-color: #6666;
+
+    box-shadow: 6px 6px #6666;
+
+    padding: 10px;
+    max-width: 60px;
+    margin: 20px 0;
+}
+
+.div-imagen>p{
+    overflow: hidden;
+    padding: 10px;
+    margin: 5px;
+}
+
+.image-content{
+    max-width: 100%;
+}
+
+
+#page>footer{
+    grid-area: foot;
+    background-color: #6666;
+}

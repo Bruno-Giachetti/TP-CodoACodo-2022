@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+*{
+    background: brown;
+    color: white;
+}
+
+.botonBonito{
+    width: 50px;
+    margin: 0 5px;
+    position: fixed;
+    top: 15px;
+    left: 0px;
+    cursor: pointer;
+
+    border-color: #6666;
+    background-color:gray;
+    border-radius: 5px;
+}
+
+.botonBonito img{
+    background-color:gray;
+}
+
+main img{
+    width: 10%;
+}
+
+
+
+
+
+
+

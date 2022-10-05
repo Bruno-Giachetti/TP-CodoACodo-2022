@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Formulario</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="formulario.css">
+
+    <div class="container">
+        <a href="./index.html">
+            <button type="button" title="Volver" class="botonBonito">
+            <img src="./assets/home-svgrepo-com.svg" class="img-fluid rounded-top" alt="Volver">
+        </button>
+        </a>
+    </div>
+    
+
+</head>
+
+<body id = "page">
+    
+    <header>
+        <!-- place navbar here -->
+    </header>
+    <main>
+        <div class="container-fluid d-flex justify-content-center" style="padding-bottom: 3%; padding-top: 3%;">
+            <h1>Contacto</h1>
+        </div>
+
+
+        <div class="container" style="padding-bottom: 3%;">
+            <div class="row g-2">
+                <div class="col w-25">
+                    <div class="row justify-content-left align-items-left align-middle g-2">
+                        <div class="col w-25 d-flex justify-content-left">
+                            <img src="./assets/mail-svgrepo-com.svg" class="img-fluid rounded-top" alt="correo">
+                            <div class="container"> consulta@correo.com </div>
+                        </div>
+                        <div class="col">
+                        </div>
+
+                        <div class="row justify-content-left align-items-left g-2">
+                            <div class="col w-25 d-flex justify-content-left">
+                                <img src="./assets/location-svgrepo-com.svg" class="img-fluid rounded-top" alt="ubicacion">
+                                <div class="container"> Direccion</div>
+                            </div>
+                            <div class="col"> 
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-left align-items-left g-2">
+                            <div class="col w-25 d-flex justify-content-left">
+                                <img src="./assets/phone-svgrepo-com.svg" class="img-fluid rounded-top" alt="telefono">
+                                <div class="container"> Telefono </div>
+                            </div>
+                            <div class="col"> 
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col">
+                    <form>
+                        <div class="form-group">
+                            <label for="Input1">Nombre</label>
+                            <input type="text" class="form-control" id="Input1" placeholder="Nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="Input2">Correo Electronico</label>
+                            <input type="email" class="form-control" id="Input2" placeholder="nombre@ejemplo.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="Input3">Asunto</label>
+                            <input type="text" class="form-control" id="Input3" placeholder="Asunto">
+                        </div>
+                        <div class="form-group">
+                            <label for="textarea">Mensaje</label>
+                            <textarea class="form-control" id="textarea" rows="4"></textarea>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container d-flex justify-content-end ">
+            <button onclick="alertar()" id="enviar" type="button" class="btn btn-primary btn-block bg-danger"> Enviar</button>
+        </div>
+
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+
+   <script src="formulario.js"></script>
+</body>
+
+</html>

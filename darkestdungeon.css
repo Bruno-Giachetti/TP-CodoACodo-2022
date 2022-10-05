@@ -4,10 +4,23 @@
 }
 
 html{
-    background-image: url(bg\ darkest.png);
+    background-image: url(./assets/bg\ darkest.png);
     background-attachment: fixed;
     background-size: 100%;
     
+}
+
+.botonBonito{
+    width: 50px;
+    margin: 0 5px;
+    position: fixed;
+    top: 15px;
+    left: 0px;
+    cursor: pointer;
+
+    border-color: #6666;
+    background-color:gray;
+    border-radius: 5px;
 }
 
 .img_gameplay {
@@ -80,7 +93,6 @@ footer {
     padding-top: 3%;
     padding-bottom: 3%;
 }
-footer div
 
 .sociales{
     grid-row: 1;
