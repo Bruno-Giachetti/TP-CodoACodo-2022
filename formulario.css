@@ -4,21 +4,58 @@
     color: white;
 }
 
-.botonBonito{
-    width: 50px;
+a{
+    text-decoration: none;
+}
+
+.volver-inicio{
+    width: 100px;
     margin: 0 5px;
+    padding: 10px;
     position: fixed;
     top: 15px;
     left: 0px;
     cursor: pointer;
+    list-style-type: none;
 
-    border-color: #6666;
-    background-color:gray;
+    background-color: #730e45;
     border-radius: 5px;
 }
 
-.botonBonito img{
-    background-color:gray;
+.volver-inicio:hover {
+    background-color: #2d0140;
+    box-shadow: 1px 3px 6px #400425;
+}
+
+
+.volver-inicio:hover {
+    background-color: #2d0140;
+    box-shadow: 1px 3px 6px #400425;
+}
+.menu-item{
+    background-color: #730e45;
+}
+
+.menu-item:hover {
+    background-color: #2d0140;
+    box-shadow: 1px 3px 6px #400425;
+}
+
+.volver-inicio span {
+    background-color: #730e45;
+}
+
+.volver-inicio span:hover {
+    background-color: #2d0140;
+    box-shadow: 1px 3px 6px #400425;
+}
+.volver-inicio i{
+    background-color: #730e45;
+}
+
+.volver-inicio i:hover {
+    background-color: #2d0140;
+    box-shadow: 1px 3px 6px #400425;
 }
 
 main img{
