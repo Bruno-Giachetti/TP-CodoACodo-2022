@@ -14,30 +14,30 @@
     <link rel="stylesheet" href="formulario.css">
     <script src="https://kit.fontawesome.com/edc625bf63.js" crossorigin="anonymous"></script>
     <div class="volver-inicio">
-        <a href="index.html"><li class="menu-item"> <i class="fa-solid fa-house"></i>
-          <span> Inicio</span></li></a>
+        <a href="index.html">
+            <li class="menu-item"> <i class="fa-solid fa-house"></i>
+                <span> Inicio</span>
+            </li>
+        </a>
     </div>
-    
+
 
 </head>
 
-<body id = "page">
-    
-    <header>
-        <!-- place navbar here -->
-    </header>
+<body id="page">
+
     <main>
-        <div class="container-fluid d-flex justify-content-center" style="padding-bottom: 3%; padding-top: 3%;">
+        <div class="container-fluid d-flex justify-content-center mb-5 mt-5" >
             <h1>Contacto</h1>
         </div>
 
 
-        <div class="container" style="padding-bottom: 3%;">
+        <div class="container px-2" style="margin-bottom: 7.5%;" novalidate>
             <div class="row g-2">
                 <div class="col w-25">
                     <div class="row justify-content-left align-items-left align-middle g-2">
                         <div class="col w-25 d-flex justify-content-left">
-                            <img src="./assets/mail-svgrepo-com.svg" class="img-fluid rounded-top" alt="correo">
+                            <img src="./assets/mail-svgrepo-com.svg" class="img-fluid rounded-top filter-white" alt="correo">
                             <div class="container"> consulta@correo.com </div>
                         </div>
                         <div class="col">
@@ -45,19 +45,20 @@
 
                         <div class="row justify-content-left align-items-left g-2">
                             <div class="col w-25 d-flex justify-content-left">
-                                <img src="./assets/location-svgrepo-com.svg" class="img-fluid rounded-top" alt="ubicacion">
+                                <img src="./assets/location-svgrepo-com.svg" class="img-fluid rounded-top filter-white"
+                                    alt="ubicacion">
                                 <div class="container"> Direccion</div>
                             </div>
-                            <div class="col"> 
+                            <div class="col">
                             </div>
                         </div>
 
                         <div class="row justify-content-left align-items-left g-2">
                             <div class="col w-25 d-flex justify-content-left">
-                                <img src="./assets/phone-svgrepo-com.svg" class="img-fluid rounded-top" alt="telefono">
+                                <img src="./assets/phone-svgrepo-com.svg" class="img-fluid rounded-top filter-white" alt="telefono">
                                 <div class="container"> Telefono </div>
                             </div>
-                            <div class="col"> 
+                            <div class="col">
                             </div>
                         </div>
                     </div>
@@ -65,38 +66,61 @@
                 </div>
 
                 <div class="col">
-                    <form>
-                        <div class="form-group">
-                            <label for="Input1">Nombre</label>
-                            <input type="text" class="form-control" id="Input1" placeholder="Nombre">
+                    <form class="needs-validation" novalidate>
+                        <div class="col-md-4">
+                            <label for="validationCustom01" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="validationCustom01" placeholder="Nombre"
+                                required>
+                            <div class="valid-feedback">
+                                Aceptado!
+                            </div>
+                            <div class="invalid-feedback">
+                                Campo vacio
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="Input2">Correo Electronico</label>
-                            <input type="email" class="form-control" id="Input2" placeholder="nombre@ejemplo.com">
+                            <label for="validationCustom02" class="form-label">Correo Electronico</label>
+                            <input type="email" class="form-control" id="validationCustom02"
+                                placeholder="nombre@ejemplo.com" required>
+                                <div class="valid-feedback">
+                                    Aceptado!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Campo vacio o no corresponde con formato e-mail  
+                                </div>
                         </div>
                         <div class="form-group">
-                            <label for="Input3">Asunto</label>
-                            <input type="text" class="form-control" id="Input3" placeholder="Asunto">
+                            <label for="validationCustom03" class="form-label">Asunto</label>
+                            <input type="text" class="form-control" id="validationCustom03" placeholder="Asunto"
+                                required>
+                                <div class="valid-feedback">
+                                    Aceptado!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Campo vacio
+                                </div>
                         </div>
                         <div class="form-group">
-                            <label for="textarea">Mensaje</label>
-                            <textarea class="form-control" id="textarea" rows="4"></textarea>
+                            <label for="validationCustom04" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="validationCustom04" rows="4" required></textarea>
+                            <div class="valid-feedback">
+                                Aceptado!
+                            </div>
+                            <div class="invalid-feedback">
+                                Campo vacio
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end mt-3">
+                            <input type="submit" value="Enviar" class="btn btn-block" style = "background-color: #730e45; color: white; "
+                            onclick="validar()">
                         </div>
                     </form>
                 </div>
 
             </div>
-
-        </div>
-
-        <div class="container d-flex justify-content-end ">
-            <button onclick="alertar()" id="enviar" type="button" class="btn btn-primary btn-block bg-danger"> Enviar</button>
         </div>
 
     </main>
-    <footer>
-        <!-- place footer here -->
-    </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
@@ -106,7 +130,7 @@
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
         </script>
 
-   <script src="formulario.js"></script>
+    <script src="formulario.js"></script>
 </body>
 
 </html>
