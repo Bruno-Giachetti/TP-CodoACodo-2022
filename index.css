@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
+html{
+    width:max-content;
+    overflow-x:none;
+}
+
 #page{
     display: grid;
     grid-auto-flow: column;
@@ -8,16 +13,18 @@
     margin: 0px;
 
     grid-template-areas:
-    "head head head "
+    "head head head"
     "main main main"
-    "footer footer footer";
+    "footer footer footer ";
 
     grid-template-rows: 1fr ;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns:100vw;
 
     background: linear-gradient(120deg, #400425 0%, #2d0140 50%, #000 100%);
 
     font-family: 'Ubuntu', sans-serif;
+
+    overflow-y:none;
 
 }
 
@@ -39,31 +46,29 @@ a:link{
 
 #page>header{
     grid-area: head;
-    width: 100%;
+    width: 100vw;
     min-height: 15vh;
     display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+    justify-content: flex-start;
+    align-items:flex-end;
     background: linear-gradient(180deg, #fff5 , #fff0);
     border-bottom: 1px solid #c6c5d9;
 
 }
 
 .header-logo img{
-    max-width: 125px;
+    padding: 20%;
+    max-width: 100px;
     filter: drop-shadow(0px -3px 3px #ffffffa3);
 }
 
 .menu-item:hover{
     background-color: #730e45;
 }
-header{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
+
 .bar-nav{
     min-width: 600px;
+    padding: 0px 20px;
 }
 
 .menu{
@@ -85,7 +90,6 @@ header{
 }
 
 /* main */
-
 
 #page>main{
     grid-area: main;
@@ -118,7 +122,7 @@ main h1{
 }
 
 .juego img{
-    height: 500px;
+    height: 400px;
     border-radius: 25px;
     box-shadow: 1px 1px 8px #c6c5d9;
     transition: 0.5s ease-in-out;
@@ -131,13 +135,125 @@ main h1{
 
 
 
-
-
 /* footer */
 
 #page>footer{
     grid-area: footer;
-    bottom: 0;
-    left:0;
-    color:wheat
+
+    font-size:15px;
+    border-top:1px solid #c6c5d9;
+    color: whitesmoke;
+    padding: 2%;
+
+   
+}
+
+/* pagina para celulares */
+
+@media screen and (orientation:portrait){
+
+    #page{
+        overflow-x: hidden;
+    }
+
+    /* header */
+    #page>header{
+        min-height: auto;
+        background: none;
+        border-bottom: 1px solid #c6c5d9;
+    }
+
+    .bar-nav{
+        min-width: 80vw;
+    
+    }
+
+    .menu{
+        justify-content: space-evenly;
+    }
+    
+    .menu-item span{
+        display: none;
+    }
+
+    .header-logo img{
+        max-width: 55px;
+    }
+
+    /* main */
+
+    #page>main{
+        margin: 15px 25vw;
+
+    }
+
+    .contenido{
+        flex-direction: column;
+    }
+
+    .juego img{
+        height: 350px;
+        width: 250px;
+    }
+
+}
+
+@media screen and (orientation:landscape) and (max-width:800px){
+
+    #page{
+
+        grid-template-areas:
+        "head main"
+        "footer footer";
+
+        grid-template-columns: 10% 90%;
+
+    }
+
+    /* header */
+
+    #page>header{
+        width: 100%;
+        flex-direction: column;
+        padding-left: 5px;
+
+        background: none;
+        border-bottom: 1px solid #c6c5d9;
+    }
+
+    .menu{
+
+        min-height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: space-around;
+    } 
+
+    .header-logo img{
+        max-width: 70px;
+        margin:0;
+        padding: 5px;
+    }
+
+    .menu-item{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+
+    .menu-item span{
+        display: none;
+
+    }
+
+    .juego img{
+        height: 300px;
+    }
+    
+    /* main */
+
+    #page>main{
+        margin:0 3%; 
+    }
+
 }
