@@ -19,6 +19,7 @@ function validar() {
          {
             console.log(i)
             alert("Formulario Enviado")
+            location.reload(true)
             i=false;
             
          }
